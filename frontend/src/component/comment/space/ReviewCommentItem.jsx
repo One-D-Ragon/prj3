@@ -198,7 +198,7 @@ export function ReviewCommentItem({
       .finally(() => setIsProcessing(false));
   }
 
-  const s3BaseUrl = "https://studysanta.s3.ap-northeast-2.amazonaws.com";
+  const s3BaseUrl = "https://study2377.s3.ap-northeast-2.amazonaws.com";
 
   const toggleReplies = () => {
     setShowReplies(!showReplies);

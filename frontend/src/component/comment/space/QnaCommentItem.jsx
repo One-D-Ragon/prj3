@@ -184,7 +184,7 @@ export function QnaCommentItem({ comment, isProcessing, setIsProcessing }) {
     setShowReplies(!showReplies);
   };
 
-  const s3BaseUrl = "https://studysanta.s3.ap-northeast-2.amazonaws.com";
+  const s3BaseUrl = "https://study2377.s3.ap-northeast-2.amazonaws.com";
 
   return (
     <Box borderWidth="1px" borderRadius="lg" p={4} bg="white" shadow="sm">

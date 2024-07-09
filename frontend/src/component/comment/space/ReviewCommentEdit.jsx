@@ -141,7 +141,7 @@ export function ReviewCommentEdit({
   }
 
   // aws 설정
-  const s3BaseUrl = "https://studysanta.s3.ap-northeast-2.amazonaws.com/prj3";
+  const s3BaseUrl = "https://study2377.s3.ap-northeast-2.amazonaws.com/prj3";
 
   return (
     <VStack spacing={4} align="stretch">
