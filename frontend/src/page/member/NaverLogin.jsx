@@ -3,8 +3,8 @@ import { Box } from "@chakra-ui/react";
 
 export const NaverLogin = () => {
   const { naver } = window;
-  const NAVER_CLIENT_ID = "fovm3yhY3SsPcaR76LDj"; // 발급 받은 Client ID 입력
-  const NAVER_CALLBACK_URL = "http://43.201.65.136:8080/member/naverlogin"; // 작성했던 Callback URL 입력
+  const NAVER_CLIENT_ID = "Tfi7kSJEmh9bNFWbZ3oD"; // 발급 받은 Client ID 입력
+  const NAVER_CALLBACK_URL = "http://localhost:5173/member/naverlogin"; // 작성했던 Callback URL 입력
 
   // 네이버 로그인 기능 및 버튼 구현
   const naverLogin = new naver.LoginWithNaverId({
