@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from "react";
 
 const { kakao } = window;
 
@@ -7,8 +7,14 @@ const KakaoMap = ({ address, latitude, longitude }) => {
   const markerRef = useRef(null);
 
   useEffect(() => {
+    // // kakao 객체가 존재하는지 확인
+    // if (!window.kakao || !window.kakao.maps) {
+    //   console.error("Kakao maps API is not loaded");
+    //   return;
+    // }
+
     if (!mapRef.current) {
-      const container = document.getElementById('map');
+      const container = document.getElementById("map");
       const options = {
         center: new kakao.maps.LatLng(33.450701, 126.570667), // 초기 지도 중심 좌표 (필요에 따라 변경)
         level: 3, // 초기 지도 확대 레벨
@@ -19,7 +25,7 @@ const KakaoMap = ({ address, latitude, longitude }) => {
       // 마커 생성
       const markerPosition = new kakao.maps.LatLng(33.450701, 126.570667); // 마커를 표시할 위치
       const marker = new kakao.maps.Marker({
-        position: markerPosition
+        position: markerPosition,
       });
       marker.setMap(map);
       markerRef.current = marker;
@@ -27,6 +33,12 @@ const KakaoMap = ({ address, latitude, longitude }) => {
   }, []);
 
   useEffect(() => {
+    // // kakao 객체가 존재하는지 확인
+    // if (!window.kakao || !window.kakao.maps) {
+    //   console.error("Kakao maps API is not loaded");
+    //   return;
+    // }
+
     if (!address) {
       // 주소가 없을 때는 마커를 숨깁니다.
       markerRef.current.setMap(null);
@@ -52,7 +64,7 @@ const KakaoMap = ({ address, latitude, longitude }) => {
     }
   }, [address, latitude, longitude]);
 
-  return <div id="map" style={{ width: '100%', height: '400px' }}></div>;
+  return <div id="map" style={{ width: "100%", height: "400px" }}></div>;
 };
 
 export default KakaoMap;
